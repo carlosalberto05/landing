@@ -1,0 +1,23 @@
+.jm-bg {
+	height: 50vh;
+	background-color: rgb(63, 62, 86);
+	padding: 0;
+	clip-path: polygon(
+		50% 0%,
+		100% 0%,
+		100% 43%,
+		94% 76%,
+		72% 94%,
+		35% 100%,
+		15% 96%,
+		0% 100%,
+		0 0
+	);
+}
+
+.cntr-bg {
+	background-image: url(./img/bg.svg);
+	/* width: 100vh; */
+	height: 50vh;
+	background-size: cover;
+}
