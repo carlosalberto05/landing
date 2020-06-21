@@ -1,3 +1,6 @@
+body {
+	color: rgb(63, 62, 86);
+}
 .jm-bg {
 	height: 50vh;
 	background-color: rgb(63, 62, 86);
@@ -20,4 +23,8 @@
 	/* width: 100vh; */
 	height: 50vh;
 	background-size: cover;
+}
+
+.btn-bg {
+	background-color: rgb(108, 99, 255);
 }
