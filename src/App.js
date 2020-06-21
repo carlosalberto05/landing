@@ -5,6 +5,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Servicios from './Servicios';
 import Contacto from './Contacto';
+import Footer from './Footer';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			</Jumbotron>
 			<Servicios />
 			<Contacto />
+			<Footer />
 		</div>
 	);
 }

@@ -28,3 +28,8 @@ body {
 .btn-bg {
 	background-color: rgb(108, 99, 255);
 }
+
+.footer-bg {
+	background-color: rgb(63, 62, 86);
+	color: white;
+}
