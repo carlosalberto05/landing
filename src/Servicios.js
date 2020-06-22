@@ -8,8 +8,8 @@ import cinco from './img/5.svg';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-// import { Container } from 'react-bootstrap/lib/Tab';
 import Container from 'react-bootstrap/Container';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Servicios = (props) => {
 	const elementos = [
@@ -47,17 +47,24 @@ const Servicios = (props) => {
 	];
 	return (
 		<Container>
-			<h1 className="display-1 text-center mb-5">Servicios</h1>
+			<ScrollAnimation animateIn="animate__zoomIn">
+				<h1 className="display-1 text-center mb-5">Servicios</h1>
+			</ScrollAnimation>
+
 			{elementos.map(({ img, id, texto, titulo }, index) => {
 				if (index % 2 === 0) {
 					return (
 						<Row className="mb-5" key={id}>
 							<Col xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }}>
-								<Image src={img} fluid />
+								<ScrollAnimation animateIn="animate__fadeInLeft">
+									<Image src={img} fluid />
+								</ScrollAnimation>
 							</Col>
 							<Col xs={{ span: 12, order: 1 }} md={{ span: 6, order: 2 }}>
-								<h1 className="display-4">{titulo}</h1>
-								<p className="lead">{texto}</p>
+								<ScrollAnimation animateIn="animate__fadeInRight">
+									<h1 className="display-4">{titulo}</h1>
+									<p className="lead">{texto}</p>
+								</ScrollAnimation>
 							</Col>
 						</Row>
 					);
@@ -65,11 +72,15 @@ const Servicios = (props) => {
 					return (
 						<Row className="mb-5" key={id}>
 							<Col xs={{ span: 12, order: 1 }} md={{ span: 6, order: 1 }}>
-								<h1 className="display-4">{titulo}</h1>
-								<p className="lead">{texto}</p>
+								<ScrollAnimation delay={1000} animateIn="animate__fadeInLeft">
+									<h1 className="display-4">{titulo}</h1>
+									<p className="lead">{texto}</p>
+								</ScrollAnimation>
 							</Col>
 							<Col xs={{ span: 12, order: 2 }} md={{ span: 6, order: 2 }}>
-								<Image src={img} fluid />
+								<ScrollAnimation delay={1000} animateIn="animate__fadeInRight">
+									<Image src={img} fluid />
+								</ScrollAnimation>
 							</Col>
 						</Row>
 					);

@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import Container from 'react-bootstrap/Container';
 import Spinner from 'react-bootstrap/Spinner';
+import ScrollAnimation from 'react-animate-on-scroll';
 import './App.css';
 
 function Contacto() {
@@ -48,7 +49,10 @@ function Contacto() {
 	return (
 		<div>
 			<Container>
-				<h1 className="display-1 text-center mb-5">Contacto</h1>
+				<ScrollAnimation animateIn="animate__zoomIn">
+					<h1 className="display-1 text-center mb-5">Contacto</h1>
+				</ScrollAnimation>
+
 				{!enviando.terminado && !enviando.procesando && (
 					<Form onSubmit={handleSubmit((data) => envio(data))}>
 						<Form.Group controlId="formBasicName">
